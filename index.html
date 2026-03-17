@@ -12,12 +12,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: white; scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(20,10,50,0.2) 100%), url('https://res.cloudinary.com/dvexzc7nv/image/upload/v1773561466/ChatGPT_Image_Mar_15_2026_01_27_23_PM_w67oyc.png'); background-size: cover; background-position: center top; background-repeat: no-repeat; background-attachment: scroll; }
+        .hero-gradient {
+            background: url('https://res.cloudinary.com/dvexzc7nv/image/upload/v1773561466/ChatGPT_Image_Mar_15_2026_01_27_23_PM_w67oyc.png');
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
         @media (max-width: 768px) {
             .hero-gradient {
-                background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.78) 55%, #0a0a0a 85%), url('https://res.cloudinary.com/dvexzc7nv/image/upload/v1773561466/ChatGPT_Image_Mar_15_2026_01_27_23_PM_w67oyc.png');
-                background-size: cover;
-                background-position: center top;
+                background: url('https://res.cloudinary.com/dvexzc7nv/image/upload/v1773561466/ChatGPT_Image_Mar_15_2026_01_27_23_PM_w67oyc.png');
+                background-size: contain;
+                background-position: top center;
                 background-repeat: no-repeat;
                 background-color: #0a0a0a;
             }
@@ -62,7 +68,7 @@
                     <div className="flex items-center justify-between gap-4">
                         <button className="flex items-center gap-3 md:gap-4 group" onClick={() => {setCurrentPage('home'); setMenuOpen(false);}}>
                             <img src="https://res.cloudinary.com/dvexzc7nv/image/upload/v1773563116/Lucky_Fitness_World_logo_fp0byx.png" alt="Lucky Fitness World Logo" className="h-12 w-12 md:h-14 md:w-14 rounded-full border border-red-500/40 shadow-lg shadow-red-500/20 group-hover:scale-105 transition" />
-                            <div className="hidden sm:block text-left">
+                            <div className="block text-left">
                                 <p className="text-white font-black text-sm md:text-base uppercase tracking-wide leading-tight">Lucky Fitness World</p>
                                 <p className="text-[10px] md:text-xs text-red-300 uppercase tracking-[0.2em]">Nangal, Punjab</p>
                             </div>
@@ -113,8 +119,10 @@
             <section className="hero-gradient min-h-[82vh] md:min-h-[92vh] flex flex-col justify-center items-center md:items-start text-center md:text-left px-4 sm:px-6 md:px-24 py-16 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent"></div>
                 <div className="absolute -bottom-20 -right-16 w-72 h-72 bg-red-600/20 blur-3xl rounded-full"></div>
-                <div className="relative z-10 max-w-3xl">
-                    <p className="inline-flex items-center bg-black/50 border border-red-500/30 px-4 py-2 rounded-full text-red-400 font-bold tracking-widest text-[11px] md:text-xs mb-6 uppercase"><i className="fas fa-dumbbell mr-2"></i>Professional Training Hub</p>
+                <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-20 w-full max-w-3xl flex justify-center">
+                    <p className="inline-flex items-center bg-black/50 border border-red-500/30 px-4 py-2 rounded-full text-red-400 font-bold tracking-widest text-[11px] md:text-xs uppercase text-left"><i className="fas fa-dumbbell mr-2"></i>Professional Training Hub</p>
+                </div>
+                <div className="relative z-10 max-w-3xl mt-12">
                     <h1 className="text-4xl sm:text-5xl md:text-8xl font-black mb-6 uppercase leading-[0.95]">
                         Transform Your <br/><span className="gradient-text">Body.</span>
                     </h1>
@@ -310,9 +318,6 @@
                                         className="relative z-10 w-full h-full object-contain transition-all duration-700"
                                     />
 
-                                    <div className="absolute top-5 left-5 z-20 bg-red-500/90 text-white text-xs md:text-sm font-black px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">
-                                        Real Transformation
-                                    </div>
 
                                     <div className="absolute bottom-5 right-5 z-20 bg-black/70 px-4 py-2 rounded-full text-sm font-bold text-red-300 border border-red-500/40">
                                         {activeImageIndex + 1} / {transformationImages.length}
@@ -1355,7 +1360,7 @@
                                                                     </a>
                                                                 </div>
                                 <p className="text-gray-500 text-sm mb-2">© 2026 LUCKY FITNESS WORLD. ALL RIGHTS RESERVED.</p>
-                                <p className="text-xs text-gray-600">★ 4.6/5 Stars | 140+ Reviews | Professional Trainers | State-of-the-art Equipment | Wheelchair Accessible</p>
+                                <p className="text-xs text-gray-600">★ 4.6/5 Stars | 140+ Reviews | Professional Trainers | State-of-the-art Equipment</p>
                             </div>
                         </div>
                     </footer>
