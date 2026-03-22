@@ -135,7 +135,7 @@
                     </div>
                     <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-2xl">
                         <div className="glass-effect px-4 py-3 rounded-xl border border-red-500/20">
-                            <p className="text-2xl font-black gradient-text">4.6<span className="text-yellow-400">/5</span></p>
+                            <p className="text-2xl font-black gradient-text">4.8<span className="text-yellow-400">/5</span></p>
                             <p className="text-xs text-gray-400 uppercase tracking-wide">Google Rating</p>
                         </div>
                         <div className="glass-effect px-4 py-3 rounded-xl border border-red-500/20">
@@ -387,8 +387,12 @@
         const HomeGymEnvironmentSection = () => {
             const gymImages = [
                 'https://content3.jdmagicbox.com/comp/ropar/f4/9999p1881.1881.171230095757.t4f4/catalogue/lucky-fitness-world-nangal-ropar-ropar-gyms-uw30ano0az.jpg',
-                'https://lh3.googleusercontent.com/p/AF1QipOQ8MVILmkXukB_ZdHZmF6wMxzc-0xoMGMQ_PVr=s1360-w1360-h1020-rw',
-                'https://lh3.googleusercontent.com/gps-cs-s/AHVAweonyN2qo-myPevhGh06atCGMTZrps2CAwlYDbahx2kP-e3SpshFOhdHWy4NV7kKRPzgkC59apsJ8y8nFiMC_FsBLpE_ioHkPFrD457E4320yjC5sZfqsBLQES0sCV7hoIm-TZhu=s1360-w1360-h1020-rw'
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084823/WhatsApp_Image_2026-03-20_at_10.06.48_PM_vrx3ec.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084872/WhatsApp_Image_2026-03-20_at_10.06.52_PM_qnylak.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084834/WhatsApp_Image_2026-03-20_at_10.06.49_PM_tvywlx.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084862/WhatsApp_Image_2026-03-20_at_10.06.51_PM_zatuor.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084843/WhatsApp_Image_2026-03-20_at_10.06.50_PM_rg2uy6.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084851/WhatsApp_Image_2026-03-20_at_10.06.50_PM_1_bvgk88.jpg'
             ];
 
             const gymVideos = [
@@ -509,7 +513,6 @@
                                 className="w-full h-auto max-h-[600px] bg-black" 
                                 controls 
                                 preload="metadata"
-                                autoPlay
                             >
                                 <source src={videos[currentIndex]} type="video/mp4" />
                             </video>
@@ -643,7 +646,7 @@
                     </div>
                     <div className="mt-12 flex flex-col md:flex-row gap-8 justify-center">
                         <div className="glass-effect px-8 py-6 rounded-lg border border-red-500/20"><p className="text-2xl font-black gradient-text">500+</p><p className="text-sm text-gray-400">Active Members</p></div>
-                        <div className="glass-effect px-8 py-6 rounded-lg border border-red-500/20"><p className="text-2xl font-black gradient-text">4.6/5</p><p className="text-sm text-gray-400">Member Rating</p></div>
+                        {/* <div className="glass-effect px-8 py-6 rounded-lg border border-red-500/20"><p className="text-2xl font-black gradient-text">4.8/5</p><p className="text-sm text-gray-400">Member Rating</p></div> */}
                         <div className="glass-effect px-8 py-6 rounded-lg border border-red-500/20"><p className="text-2xl font-black gradient-text">Morning - 5:00 am - 10:00<br/>Evening - 3:00 pm - 10:00 pm</p><p className="text-sm text-gray-400">Sunday Off</p></div>
                     </div>
                 </div>
@@ -715,7 +718,7 @@
 
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                     <div className="glass-effect p-5 rounded-xl border border-red-500/20">
-                                        <p className="text-3xl font-black gradient-text">4.6/5</p>
+                                        {/* <p className="text-3xl font-black gradient-text">4.8/5</p> */}
                                         <p className="text-xs text-gray-400 uppercase tracking-wide">Member Rating</p>
                                     </div>
                                     <div className="glass-effect p-5 rounded-xl border border-red-500/20">
@@ -1072,9 +1075,12 @@
             ];
 
             const gymImages = [
-                'https://lh3.googleusercontent.com/p/AF1QipOQ8MVILmkXukB_ZdHZmF6wMxzc-0xoMGMQ_PVr=s1360-w1360-h1020-rw',
-                'https://lh3.googleusercontent.com/p/AF1QipMVx84FuFe7tEieP19g-VdBAspJlL-yZCkXucW3=s1360-w1360-h1020-rw',
-                'https://lh3.googleusercontent.com/gps-cs-s/AHVAweonyN2qo-myPevhGh06atCGMTZrps2CAwlYDbahx2kP-e3SpshFOhdHWy4NV7kKRPzgkC59apsJ8y8nFiMC_FsBLpE_ioHkPFrD457E4320yjC5sZfqsBLQES0sCV7hoIm-TZhu=s1360-w1360-h1020-rw'
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084823/WhatsApp_Image_2026-03-20_at_10.06.48_PM_vrx3ec.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084872/WhatsApp_Image_2026-03-20_at_10.06.52_PM_qnylak.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084834/WhatsApp_Image_2026-03-20_at_10.06.49_PM_tvywlx.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084862/WhatsApp_Image_2026-03-20_at_10.06.51_PM_zatuor.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084843/WhatsApp_Image_2026-03-20_at_10.06.50_PM_rg2uy6.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774084851/WhatsApp_Image_2026-03-20_at_10.06.50_PM_1_bvgk88.jpg'
             ];
 
             const transformationVideos = [
@@ -1223,7 +1229,7 @@
                             </div>
                             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
                                 <div className="rounded-xl border border-red-500/15 bg-black/35 p-4"><p className="text-3xl font-black gradient-text">500+</p><p className="text-gray-400">Happy Members</p></div>
-                                <div className="rounded-xl border border-red-500/15 bg-black/35 p-4"><p className="text-3xl font-black gradient-text">4.6/5</p><p className="text-gray-400">Star Rating</p></div>
+                                {/* <div className="rounded-xl border border-red-500/15 bg-black/35 p-4"><p className="text-3xl font-black gradient-text">4.8/5</p><p className="text-gray-400">Star Rating</p></div> */}
                                 <div className="rounded-xl border border-red-500/15 bg-black/35 p-4"><p className="text-3xl font-black gradient-text">200+</p><p className="text-gray-400">Equipment</p></div>
                                 <div className="rounded-xl border border-red-500/15 bg-black/35 p-4"><p className="text-3xl font-black gradient-text">15+</p><p className="text-gray-400">Expert Trainers</p></div>
                             </div>
@@ -1505,14 +1511,13 @@
                                                                     </a>
                                                                 </div>
                                 <p className="text-gray-500 text-sm mb-2">© 2026 LUCKY FITNESS WORLD. ALL RIGHTS RESERVED.</p>
-                                <p className="text-xs text-gray-600">★ 4.6/5 Stars | 140+ Reviews | Professional Trainers | State-of-the-art Equipment</p>
+                                                            <p className="text-xs text-gray-600">★ 4.8/5 Stars | 140+ Reviews | Professional Trainers | State-of-the-art Equipment</p>
                             </div>
                         </div>
                     </footer>
                 </div>
             );
         };
-
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
