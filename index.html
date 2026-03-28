@@ -169,92 +169,15 @@
             </section>
         );
 
-        const QuickServicesPreview = ({ setCurrentPage }) => (
-            <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-gradient-to-b from-zinc-950 to-black">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-12 md:mb-20">
-                        <p className="text-red-500 font-bold tracking-widest text-xs uppercase mb-4"><i className="fas fa-bolt mr-2"></i>Our Core Services</p>
-                        <h2 className="section-title text-3xl sm:text-4xl md:text-6xl font-black mb-4 uppercase">What We Offer</h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto">Focused programs designed for fat loss, muscle gain, and long-term body transformation.</p>
-                    </div>
-                    <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-                        <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 hover:shadow-lg hover:shadow-red-500/10 transition group cursor-pointer hover:-translate-y-1" onClick={() => setCurrentPage('services')}>
-                            <div className="text-5xl text-red-500 mb-4 group-hover:scale-110 transition-transform"><i className="fas fa-user-tie"></i></div>
-                            <h3 className="text-xl font-black mb-3">Personal Training</h3>
-                            <p className="text-gray-400 text-sm">One-on-one coaching with expert trainers for customized fitness goals</p>
-                        </div>
-                        <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 hover:shadow-lg hover:shadow-red-500/10 transition group cursor-pointer hover:-translate-y-1" onClick={() => setCurrentPage('services')}>
-                            <div className="text-5xl text-red-500 mb-4 group-hover:scale-110 transition-transform"><i className="fas fa-fire"></i></div>
-                            <h3 className="text-xl font-black mb-3">Weight Loss Program</h3>
-                            <p className="text-gray-400 text-sm">Cardio, strength training, and nutrition guidance for rapid fat loss</p>
-                        </div>
-                        <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 hover:shadow-lg hover:shadow-red-500/10 transition group cursor-pointer hover:-translate-y-1" onClick={() => setCurrentPage('services')}>
-                            <div className="text-5xl text-red-500 mb-4 group-hover:scale-110 transition-transform"><i className="fas fa-dumbbell"></i></div>
-                            <h3 className="text-xl font-black mb-3">Muscle Gain Program</h3>
-                            <p className="text-gray-400 text-sm">Progressive strength training with nutrition plans for maximum gains</p>
-                        </div>
-                        <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 hover:shadow-lg hover:shadow-red-500/10 transition group cursor-pointer hover:-translate-y-1" onClick={() => setCurrentPage('services')}>
-                            <div className="text-5xl text-red-500 mb-4 group-hover:scale-110 transition-transform"><i className="fas fa-apple-alt"></i></div>
-                            <h3 className="text-xl font-black mb-3">Diet & Supplements</h3>
-                            <p className="text-gray-400 text-sm">Nutrition plans and supplements now available inside Services page</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        );
+        const QuickServicesPreview = ({ setCurrentPage }) => {
+            // This component is kept for compatibility but not used in home page
+            return null;
+        };
 
-        const WhyChooseUs = () => (
-            <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-black">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-12 md:mb-20">
-                        <p className="text-red-500 font-bold tracking-widest text-xs uppercase mb-4"><i className="fas fa-star mr-2"></i>Why Choose Us</p>
-                        <h2 className="section-title text-3xl sm:text-4xl md:text-6xl font-black mb-8 uppercase">What Makes Us Different</h2>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-12">
-                        <div className="space-y-8">
-                            <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group">
-                                <div className="flex items-start gap-4">
-                                    <div className="text-4xl text-red-500 flex-shrink-0 group-hover:scale-110 transition-transform"><i className="fas fa-medal"></i></div>
-                                    <div>
-                                        <h3 className="text-2xl font-black mb-2">Certified Trainers</h3>
-                                        <p className="text-gray-400">Expert coaches led by Rohit Rana, Mr Universe 2023 Gold Medalist with proven track record</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group">
-                                <div className="flex items-start gap-4">
-                                    <div className="text-4xl text-red-500 flex-shrink-0 group-hover:scale-110 transition-transform"><i className="fas fa-cog"></i></div>
-                                    <div>
-                                        <h3 className="text-2xl font-black mb-2">Modern Equipment</h3>
-                                        <p className="text-gray-400">State-of-the-art fitness equipment across weight training, cardio, and CrossFit areas</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="space-y-8">
-                            <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group">
-                                <div className="flex items-start gap-4">
-                                    <div className="text-4xl text-red-500 flex-shrink-0 group-hover:scale-110 transition-transform"><i className="fas fa-hourglass-end"></i></div>
-                                    <div>
-                                        <h3 className="text-2xl font-black mb-2">Flexible Timings</h3>
-                                        <p className="text-gray-400">Morning 5:00 AM - 10:00 AM, Evening 3:00 PM - 10:00 PM</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group">
-                                <div className="flex items-start gap-4">
-                                    <div className="text-4xl text-red-500 flex-shrink-0 group-hover:scale-110 transition-transform"><i className="fas fa-utensils"></i></div>
-                                    <div>
-                                        <h3 className="text-2xl font-black mb-2">Personalized Nutrition Plans</h3>
-                                        <p className="text-gray-400">Customized diet plans tailored to your fitness goals and body transformation needs</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        );
+        const WhyChooseUs = () => {
+            // This component is kept for compatibility but not used in home page
+            return null;
+        };
 
         const TransformationsSection = () => {
             const transformationImages = [
@@ -661,6 +584,176 @@
                 <p className="text-gray-400 leading-relaxed">{desc}</p>
             </div>
         );
+
+        const HomeFeatureBoxes = () => {
+            const [activeModal, setActiveModal] = useState(null);
+
+            const features = [
+                {
+                    id: 'what-we-offer',
+                    title: 'What We Offer',
+                    subtitle: 'Focused programs designed for fat loss, muscle gain, and long-term body transformation.',
+                    icon: 'fa-bolt',
+                    fullContent: (
+                        <div className="space-y-6">
+                            <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-6">
+                                <div className="glass-effect p-6 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group cursor-pointer hover:-translate-y-1">
+                                    <div className="text-5xl text-red-500 mb-4 group-hover:scale-110 transition-transform"><i className="fas fa-user-tie"></i></div>
+                                    <h4 className="text-xl font-black mb-3">Personal Training</h4>
+                                    <p className="text-gray-400 text-sm">One-on-one coaching with expert trainers for customized fitness goals</p>
+                                </div>
+                                <div className="glass-effect p-6 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group cursor-pointer hover:-translate-y-1">
+                                    <div className="text-5xl text-red-500 mb-4 group-hover:scale-110 transition-transform"><i className="fas fa-fire"></i></div>
+                                    <h4 className="text-xl font-black mb-3">Weight Loss Program</h4>
+                                    <p className="text-gray-400 text-sm">Cardio, strength training, and nutrition guidance for rapid fat loss</p>
+                                </div>
+                                <div className="glass-effect p-6 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group cursor-pointer hover:-translate-y-1">
+                                    <div className="text-5xl text-red-500 mb-4 group-hover:scale-110 transition-transform"><i className="fas fa-dumbbell"></i></div>
+                                    <h4 className="text-xl font-black mb-3">Muscle Gain Program</h4>
+                                    <p className="text-gray-400 text-sm">Progressive strength training with nutrition plans for maximum gains</p>
+                                </div>
+                                <div className="glass-effect p-6 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group cursor-pointer hover:-translate-y-1">
+                                    <div className="text-5xl text-red-500 mb-4 group-hover:scale-110 transition-transform"><i className="fas fa-apple-alt"></i></div>
+                                    <h4 className="text-xl font-black mb-3">Diet & Supplements</h4>
+                                    <p className="text-gray-400 text-sm">Nutrition plans and supplements now available inside Services page</p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                },
+                {
+                    id: 'what-makes-us-different',
+                    title: 'What Makes Us Different',
+                    subtitle: 'Why Lucky Fitness World is the best choice for your fitness journey',
+                    icon: 'fa-star',
+                    fullContent: (
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <div className="space-y-8">
+                                <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group">
+                                    <div className="flex items-start gap-4">
+                                        <div className="text-4xl text-red-500 flex-shrink-0 group-hover:scale-110 transition-transform"><i className="fas fa-medal"></i></div>
+                                        <div>
+                                            <h4 className="text-2xl font-black mb-2">Certified Trainers</h4>
+                                            <p className="text-gray-400">Expert coaches led by Rohit Rana, Mr Universe 2023 Gold Medalist with proven track record</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group">
+                                    <div className="flex items-start gap-4">
+                                        <div className="text-4xl text-red-500 flex-shrink-0 group-hover:scale-110 transition-transform"><i className="fas fa-cog"></i></div>
+                                        <div>
+                                            <h4 className="text-2xl font-black mb-2">Modern Equipment</h4>
+                                            <p className="text-gray-400">State-of-the-art fitness equipment across weight training, cardio, and CrossFit areas</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="space-y-8">
+                                <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group">
+                                    <div className="flex items-start gap-4">
+                                        <div className="text-4xl text-red-500 flex-shrink-0 group-hover:scale-110 transition-transform"><i className="fas fa-hourglass-end"></i></div>
+                                        <div>
+                                            <h4 className="text-2xl font-black mb-2">Flexible Timings</h4>
+                                            <p className="text-gray-400">Morning 5:00 AM - 10:00 AM, Evening 3:00 PM - 10:00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition group">
+                                    <div className="flex items-start gap-4">
+                                        <div className="text-4xl text-red-500 flex-shrink-0 group-hover:scale-110 transition-transform"><i className="fas fa-utensils"></i></div>
+                                        <div>
+                                            <h4 className="text-2xl font-black mb-2">Personalized Nutrition Plans</h4>
+                                            <p className="text-gray-400">Customized diet plans tailored to your fitness goals and body transformation needs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                },
+                {
+                    id: 'training-programs',
+                    title: 'Training Programs',
+                    subtitle: 'Specialized coaching for all fitness goals at Lucky Fitness World, Nangal.',
+                    icon: 'fa-fire',
+                    fullContent: (
+                        <div className="grid md:grid-cols-3 gap-8">
+                            <div className="glass-effect p-8 rounded-2xl hover:bg-red-600/5 transition-all duration-300 group border border-red-500/10 hover:border-red-500/30 hover:shadow-2xl hover:shadow-red-500/10">
+                                <div className="text-3xl text-red-500 mb-4 group-hover:scale-110 transition-transform duration-300"><i className="fas fa-dumbbell"></i></div>
+                                <div className="w-12 h-1 bg-gradient-to-r from-red-600 to-red-400 mb-6 group-hover:w-16 transition-all duration-500"></div>
+                                <h4 className="text-2xl font-bold mb-4 group-hover:text-red-400 transition duration-300">Weight Gain</h4>
+                                <p className="text-gray-400 leading-relaxed">Build muscle mass with expert guidance from Rohit Rana. Progressive strength training and nutrition plans.</p>
+                            </div>
+                            <div className="glass-effect p-8 rounded-2xl hover:bg-red-600/5 transition-all duration-300 group border border-red-500/10 hover:border-red-500/30 hover:shadow-2xl hover:shadow-red-500/10">
+                                <div className="text-3xl text-red-500 mb-4 group-hover:scale-110 transition-transform duration-300"><i className="fas fa-bolt"></i></div>
+                                <div className="w-12 h-1 bg-gradient-to-r from-red-600 to-red-400 mb-6 group-hover:w-16 transition-all duration-500"></div>
+                                <h4 className="text-2xl font-bold mb-4 group-hover:text-red-400 transition duration-300">Weight Loss</h4>
+                                <p className="text-gray-400 leading-relaxed">Personalized weight loss programs combining cardio, strength training, and dietary consultation.</p>
+                            </div>
+                            <div className="glass-effect p-8 rounded-2xl hover:bg-red-600/5 transition-all duration-300 group border border-red-500/10 hover:border-red-500/30 hover:shadow-2xl hover:shadow-red-500/10">
+                                <div className="text-3xl text-red-500 mb-4 group-hover:scale-110 transition-transform duration-300"><i className="fas fa-heart"></i></div>
+                                <div className="w-12 h-1 bg-gradient-to-r from-red-600 to-red-400 mb-6 group-hover:w-16 transition-all duration-500"></div>
+                                <h4 className="text-2xl font-bold mb-4 group-hover:text-red-400 transition duration-300">Body Transformation</h4>
+                                <p className="text-gray-400 leading-relaxed">Complete transformation programs with dedicated coaching, nutrition guidance, and regular progress tracking.</p>
+                            </div>
+                        </div>
+                    )
+                }
+            ];
+
+            return (
+                <>
+                    <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-gradient-to-b from-zinc-950 to-black">
+                        <div className="max-w-7xl mx-auto">
+                            <div className="text-center mb-12 md:mb-16">
+                                <p className="text-red-500 font-bold tracking-widest text-xs uppercase mb-4"><i className="fas fa-star mr-2"></i>Featured Sections</p>
+                                <h2 className="section-title text-3xl sm:text-4xl md:text-6xl font-black mb-4 uppercase">Our Key Offerings</h2>
+                            </div>
+                            
+                            <div className="grid md:grid-cols-3 gap-6">
+                                {features.map((feature) => (
+                                    <div key={feature.id} className="group">
+                                        <div className="glass-effect p-8 rounded-2xl border border-red-500/10 hover:border-red-500/30 hover:shadow-lg hover:shadow-red-500/10 transition-all duration-300 h-full flex flex-col">
+                                            <div className="text-5xl text-red-500 mb-4 group-hover:scale-110 transition-transform"><i className={`fas ${feature.icon}`}></i></div>
+                                            <h3 className="text-2xl font-black mb-3">{feature.title}</h3>
+                                            <p className="text-gray-400 text-sm mb-6 flex-grow">{feature.subtitle}</p>
+                                            <button
+                                                onClick={() => setActiveModal(feature.id)}
+                                                className="text-red-500 font-bold hover:text-red-400 transition duration-300 uppercase tracking-wider text-sm mt-auto"
+                                            >
+                                                View Details <i className="fas fa-arrow-right ml-2"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Modal */}
+                    {activeModal && (
+                        <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setActiveModal(null)}>
+                            <div className="bg-gradient-to-b from-zinc-900 to-black max-w-4xl w-full max-h-[90vh] rounded-3xl border border-red-500/20 overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+                                <div className="sticky top-0 bg-gradient-to-r from-black to-zinc-900 border-b border-red-500/20 px-8 py-6 flex items-center justify-between">
+                                    <h2 className="text-3xl md:text-4xl font-black uppercase">
+                                        {features.find(f => f.id === activeModal)?.title}
+                                    </h2>
+                                    <button
+                                        onClick={() => setActiveModal(null)}
+                                        className="text-white hover:text-red-500 transition text-3xl leading-none"
+                                    >
+                                        ×
+                                    </button>
+                                </div>
+                                <div className="p-8 md:p-10">
+                                    {features.find(f => f.id === activeModal)?.fullContent}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </>
+            );
+        };
 
         const AboutPage = () => {
             const gymFeatures = [
@@ -1435,29 +1528,11 @@
                         <>
                             <Hero setCurrentPage={setCurrentPage} onJoinNow={handleJoinNow} />
                             <HomeTrustStrip />
-                            <QuickServicesPreview setCurrentPage={setCurrentPage} />
-                            <WhyChooseUs />
+                            <HomeFeatureBoxes />
                             <TransformationsSection />
                             <HomeGymEnvironmentSection />
                             <HomeReviewsSection />
                             <CTASection onBookNow={handleBookNow} onContactUs={handleContactUs} />
-                            <section id="programs" className="py-16 md:py-24 px-4 sm:px-6 md:px-12">
-                                <div className="max-w-7xl mx-auto">
-                                    <div className="mb-12 md:mb-20">
-                                        <p className="text-red-500 font-bold tracking-widest text-xs uppercase mb-4"><i className="fas fa-fire mr-2"></i>Premium Services</p>
-                                        <h2 className="section-title accent-border sm:pl-6 text-3xl sm:text-4xl md:text-6xl font-black uppercase mb-2">Training Programs</h2>
-                                        <p className="text-gray-400 sm:pl-6 text-base md:text-lg mt-6">Specialized coaching for all fitness goals at Lucky Fitness World, Nangal.</p>
-                                    </div>
-                                    <div className="grid md:grid-cols-3 gap-8 mb-12">
-                                        <ProgramCard icon="fa-dumbbell" title="Weight Gain" desc="Build muscle mass with expert guidance from Rohit Rana. Progressive strength training and nutrition plans." />
-                                        <ProgramCard icon="fa-bolt" title="Weight Loss" desc="Personalized weight loss programs combining cardio, strength training, and dietary consultation." />
-                                        <ProgramCard icon="fa-heart" title="Body Transformation" desc="Complete transformation programs with dedicated coaching, nutrition guidance, and regular progress tracking." />
-                                    </div>
-                                    <div className="text-center">
-                                        <button onClick={() => setCurrentPage('contact')} className="text-red-500 font-bold hover:text-red-400 transition duration-300 uppercase tracking-wider">Contact For Plans →</button>
-                                    </div>
-                                </div>
-                            </section>
                         </>
                     )}
                     {currentPage === 'about' && <AboutPage setCurrentPage={setCurrentPage} />}
