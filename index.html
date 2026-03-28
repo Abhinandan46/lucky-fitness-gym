@@ -116,18 +116,34 @@
         };
 
         const Hero = ({ setCurrentPage, onJoinNow }) => (
-            <section className="hero-gradient min-h-[82vh] md:min-h-[92vh] flex flex-col justify-center items-center md:items-start text-center md:text-left px-4 sm:px-6 md:px-24 py-16 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent"></div>
-                <div className="absolute -bottom-20 -right-16 w-72 h-72 bg-red-600/20 blur-3xl rounded-full"></div>
+            <section className="relative min-h-screen md:min-h-[92vh] flex flex-col justify-center items-center md:items-start text-center md:text-left px-4 sm:px-6 md:px-24 py-12 md:py-16 overflow-hidden">
+                {/* Video Background */}
+                <video
+                    className="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
+                    src="https://res.cloudinary.com/duv1fayye/video/upload/v1774694606/Black_and_Green_Business_Gym_Fitness_Animated_Video_MP4_o4qvzb.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                />
+                {/* Mobile Background - Static image fallback */}
+                <div 
+                    className="absolute inset-0 w-full h-full object-cover z-0 md:hidden bg-cover bg-center"
+                    style={{backgroundImage: "url('https://res.cloudinary.com/dvexzc7nv/image/upload/v1773561466/ChatGPT_Image_Mar_15_2026_01_27_23_PM_w67oyc.png')"}}
+                />
+                {/* Overlay for darkening */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent z-10"></div>
+                <div className="absolute -bottom-20 -right-16 w-72 h-72 bg-red-600/20 blur-3xl rounded-full z-10"></div>
                 <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-20 w-full max-w-3xl flex justify-center">
                     <p className="inline-flex items-center bg-black/50 border border-red-500/30 px-4 py-2 rounded-full text-red-400 font-bold tracking-widest text-[11px] md:text-xs uppercase text-left"><i className="fas fa-dumbbell mr-2"></i>Professional Training Hub</p>
                 </div>
-                <div className="relative z-10 max-w-3xl mt-12">
+                <div className="relative z-20 max-w-3xl mt-12">
                     <h1 className="text-4xl sm:text-5xl md:text-8xl font-black mb-6 uppercase leading-[0.95]">
                         Transform Your <br/><span className="gradient-text">Body.</span>
                     </h1>
                     <p className="max-w-2xl text-gray-200 mb-10 text-sm sm:text-base md:text-lg leading-relaxed font-light">
-                            Located in Nangal, Punjab. Expert training by Rohit Rana (Mr Universe 2023 Gold Medalist), personalized coaching, and state-of-the-art equipment for weight loss, muscle building, and complete body transformation.
+                        Located in Nangal, Punjab. Expert training by Rohit Rana (Mr Universe 2023 Gold Medalist), personalized coaching, and state-of-the-art equipment for weight loss, muscle building, and complete body transformation.
                     </p>
                     <div className="flex gap-4 flex-wrap justify-center md:justify-start">
                         <button onClick={onJoinNow} className="premium-button text-white w-full sm:w-auto px-8 md:px-10 py-4 rounded-lg font-bold uppercase tracking-wider text-sm">Join Now</button>
@@ -143,7 +159,7 @@
                             <p className="text-xs text-gray-400 uppercase tracking-wide">Active Members</p>
                         </div>
                         <div className="glass-effect px-4 py-3 rounded-xl border border-red-500/20">
-                                   <p className="text-sm text-white font-bold"><i className="fas fa-clock text-red-500 mr-2"></i>Morning - 5:00 am - 10:00<br/>Evening - 3:00 pm - 10:00 pm<br/>Sunday Off</p>
+                            <p className="text-sm text-white font-bold"><i className="fas fa-clock text-red-500 mr-2"></i>Morning - 5:00 am - 10:00<br/>Evening - 3:00 pm - 10:00 pm<br/>Sunday Off</p>
                         </div>
                     </div>
                 </div>
