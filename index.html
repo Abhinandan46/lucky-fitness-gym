@@ -17,7 +17,7 @@
             overflow: hidden;
             background-color: #0a0a0a;
         }
-        .hero-gradient video {
+        .hero-gradient img {
             position: absolute;
             top: 0;
             left: 0;
@@ -26,14 +26,27 @@
             object-fit: cover;
             z-index: 0;
         }
+        @media (max-width: 768px) {
+            .hero-gradient img {
+                object-fit: contain;
+                object-position: top;
+                background-color: #000;
+            }
+            .hero-gradient {
+                padding-top: 500px;
+            }
+            .hero-gradient h1 {
+                margin-top: 60px;
+            }
+            .hero-gradient p {
+                margin-top: 40px;
+            }
+        }
         .hero-gradient > * {
             position: relative;
             z-index: 10;
         }
         @media (max-width: 768px) {
-            .hero-gradient video {
-                object-fit: cover;
-            }
             .hero-gradient h1, .hero-gradient p, .hero-gradient span { text-shadow: 0 2px 12px rgba(0,0,0,0.85); }
         }
         .accent-border { border-left: 4px solid #ef4444; }
@@ -122,22 +135,35 @@
             );
         };
 
-        const Hero = ({ setCurrentPage, onJoinNow }) => (
+        const Hero = ({ setCurrentPage, onJoinNow }) => {
+            const [backgroundImage, setBackgroundImage] = useState(0);
+            const images = [
+                'https://res.cloudinary.com/dvexzc7nv/image/upload/v1773561466/ChatGPT_Image_Mar_15_2026_01_27_23_PM_w67oyc.png',
+                'https://res.cloudinary.com/dvexzc7nv/image/upload/v1774716777/ChatGPT_Image_Mar_28_2026_10_22_34_PM_zpeprc.png',
+                'https://res.cloudinary.com/dvexzc7nv/image/upload/v1774717231/Focused_workout_in_a_modern_gym_cnbcj6.png'
+            ];
+
+            // Switch background image every 4 seconds
+            useEffect(() => {
+                const interval = setInterval(() => {
+                    setBackgroundImage(prev => (prev + 1) % images.length);
+                }, 4000);
+                return () => clearInterval(interval);
+            }, []);
+
+            return (
             <section className="hero-gradient min-h-screen md:min-h-[92vh] flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-24 py-12 md:py-16 relative">
-                {/* Video Background */}
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                >
-                    <source src="https://res.cloudinary.com/duv1fayye/video/upload/v1774694606/Black_and_Green_Business_Gym_Fitness_Animated_Video_MP4_o4qvzb.mp4" type="video/mp4" />
-                </video>
+                {/* Background Image with transition */}
+                <img
+                    key={backgroundImage}
+                    src={images[backgroundImage]}
+                    alt="Hero Background"
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+                />
                 {/* Overlay for darkening */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent"></div>
                 <div className="absolute -bottom-20 -right-16 w-72 h-72 bg-red-600/20 blur-3xl rounded-full"></div>
-                <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-full max-w-3xl flex justify-center">
+                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-full max-w-3xl flex justify-center">
                     <p className="inline-flex items-center bg-black/50 border border-red-500/30 px-4 py-2 rounded-full text-red-400 font-bold tracking-widest text-[11px] md:text-xs uppercase text-left"><i className="fas fa-dumbbell mr-2"></i>Professional Training Hub</p>
                 </div>
                 
@@ -168,7 +194,8 @@
                     </div>
                 </div>
             </section>
-        );
+            );
+        };
 
         const HomeTrustStrip = () => (
             <section className="px-4 sm:px-6 md:px-12 -mt-10 md:-mt-12 relative z-20">
@@ -1660,15 +1687,8 @@
                                                                     </a>
                                                                 </div>
                                 <p className="text-gray-500 text-sm mb-2">© 2026 LUCKY FITNESS WORLD. ALL RIGHTS RESERVED.</p>
-                                <a href="https://share.google/XqjnvtF7cpF00OVdW" target="_blank" rel="noopener noreferrer" className="inline-block mb-3 px-6 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
-                                    Google Review Form
-                                </a>
                                 <p className="text-xs text-gray-600 mb-3">★ 4.8/5 Stars | 140+ Reviews | Professional Trainers | State-of-the-art Equipment</p>
-                                <div className="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-red-500/10 to-red-600/5 px-6 py-3 rounded-full border border-red-500/30 hover:border-red-500/50 hover:bg-gradient-to-r hover:from-red-500/20 hover:to-red-600/10 transition duration-300">
-                                    <i className="fas fa-code text-red-400"></i>
-                                    <span className="text-sm text-gray-300">Designed & Developed by</span>
-                                    <a href="https://share.google/XqjnvtF7cpF00OVdW" target="_blank" rel="noopener noreferrer" className="font-bold bg-gradient-to-r from-red-400 to-red-500 -webkit-background-clip-text -webkit-text-fill-color-transparent bg-clip-text hover:from-red-300 hover:to-red-400 transition">Abhi Webverse</a>
-                                </div>
+                                <p className="text-sm text-gray-400">Made by <a href="https://share.google/5mgj9MUO2CbgAD7cl" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 transition">Abhi webvserse</a></p>
                             </div>
                         </div>
                     </footer>
