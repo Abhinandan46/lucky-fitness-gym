@@ -16,6 +16,8 @@
             position: relative;
             overflow: hidden;
             background-color: #0a0a0a;
+            background-size: cover;
+            background-position: center;
         }
         .hero-gradient img {
             position: absolute;
@@ -24,6 +26,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center right;
             z-index: 0;
         }
         @media (max-width: 768px) {
@@ -32,6 +35,16 @@
                 object-position: top;
                 background-color: #000;
             }
+            .hero-gradient {
+                padding-top: 250px;
+            }
+            .hero-gradient h1 {
+                margin-top: 30px;
+            }
+            .hero-gradient p {
+                margin-top: 20px;
+            }
+        }
             .hero-gradient {
                 padding-top: 500px;
             }
@@ -57,6 +70,25 @@
         .nav-link { position: relative; font-weight: 500; transition: color 0.3s ease; }
         .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); transition: width 0.3s ease; }
         .nav-link:hover::after { width: 100%; }
+        
+        /* Mobile hero boxes styling */
+        @media (max-width: 640px) {
+            .hero-gradient .glass-effect {
+                padding: 0.5rem 0.5rem !important;
+            }
+            
+            .hero-gradient .glass-effect p {
+                font-size: 0.75rem !important;
+            }
+            
+            .hero-gradient .glass-effect .text-2xl {
+                font-size: 1rem !important;
+            }
+            
+            .hero-gradient .glass-effect .text-sm {
+                font-size: 0.5rem !important;
+            }
+        }
         .section-title { position: relative; display: inline-block; }
         .section-title::after { content: ''; position: absolute; bottom: -8px; left: 0; height: 3px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); width: 80%; border-radius: 2px; }
         .book-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); display: flex; justify-content: center; align-items: center; z-index: 1000; }
@@ -140,7 +172,10 @@
             const images = [
                 'https://res.cloudinary.com/dvexzc7nv/image/upload/v1773561466/ChatGPT_Image_Mar_15_2026_01_27_23_PM_w67oyc.png',
                 'https://res.cloudinary.com/dvexzc7nv/image/upload/v1774716777/ChatGPT_Image_Mar_28_2026_10_22_34_PM_zpeprc.png',
-                'https://res.cloudinary.com/dvexzc7nv/image/upload/v1774717231/Focused_workout_in_a_modern_gym_cnbcj6.png'
+                'https://res.cloudinary.com/dvexzc7nv/image/upload/v1774717231/Focused_workout_in_a_modern_gym_cnbcj6.png',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774717375/PDFReader_20260328_2231_02_wgpqbq.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774717622/PDFReader_20260328_2231_03_piltor.jpg',
+                'https://res.cloudinary.com/duv1fayye/image/upload/v1774717596/PDFReader_20260328_2231_04_yaxfmr.jpg'
             ];
 
             // Switch background image every 4 seconds
@@ -164,7 +199,7 @@
                 <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent"></div>
                 <div className="absolute -bottom-20 -right-16 w-72 h-72 bg-red-600/20 blur-3xl rounded-full"></div>
                 <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-full max-w-3xl flex justify-center">
-                    <p className="inline-flex items-center bg-black/50 border border-red-500/30 px-4 py-2 rounded-full text-red-400 font-bold tracking-widest text-[11px] md:text-xs uppercase text-left"><i className="fas fa-dumbbell mr-2"></i>Professional Training Hub</p>
+                    <p className="inline-flex items-center bg-black/50 border border-red-500/30 px-2 py-0.5 rounded-full text-red-400 font-bold tracking-widest text-[7px] md:text-xs uppercase text-left"><i className="fas fa-dumbbell mr-1 text-xs"></i>Professional Training Hub</p>
                 </div>
                 
                 {/* Left Content */}
@@ -179,7 +214,7 @@
                         <button onClick={onJoinNow} className="premium-button text-white w-full sm:w-auto px-8 md:px-10 py-4 rounded-lg font-bold uppercase tracking-wider text-sm">Join Now</button>
                         <button onClick={() => setCurrentPage('services')} className="glass-effect text-white w-full sm:w-auto px-8 md:px-10 py-4 rounded-lg font-bold uppercase tracking-wider text-sm hover:bg-white/10 transition duration-300">View Services</button>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 w-full">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 w-full">
                         <div className="glass-effect px-4 py-3 rounded-xl border border-red-500/20">
                             <p className="text-2xl font-black gradient-text">4.8<span className="text-yellow-400">/5</span></p>
                             <p className="text-xs text-gray-400 uppercase tracking-wide">Google Rating</p>
